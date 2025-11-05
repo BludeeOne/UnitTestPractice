@@ -51,3 +51,9 @@ TEST(PasswordTest, null_input)
 	int actual = my_password.count_leading_characters("");
 	ASSERT_EQ(0, actual);
 }
+TEST(PasswordTest, two_letter_password)
+{
+	Password my_password;
+	int actual = my_password.count_leading_characters("pp");
+	ASSERT_EQ(2, actual);
+}
